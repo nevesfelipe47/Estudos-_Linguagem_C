@@ -1,15 +1,11 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+
 
 void limpar_entrada(){
 
     char c;
     while ((c = getchar()) != '\n' && c != EOF) {}
-}
-
-void ler_texto (char *buffer, int length){
-    fgets(buffer, length, stdin);
-    strtok(buffer, "\n");
 }
 
 int main(){
@@ -20,13 +16,12 @@ int main(){
     char nome[50];
 
 
-    printf("Digite o valor da Idade ");
-    scanf("%d", &idade);
-    printf("Digite o nome da pessoa: ");
 
+    printf("Digite o nome da pessoa: ");
     limpar_entrada();
     fgets(nome,50,stdin);
-
+    printf("Digite o valor da Idade ");
+    scanf("%d", &idade);
     printf("Digite o seu peso: ");
     scanf("%lf",&peso);
     printf("Digite a sua altura: ");
@@ -36,10 +31,22 @@ int main(){
     imc = peso/(altura*altura);
 
     printf("Nome Completo do usuario: %s",nome);
-    printf("idade: %d\n",idade);
+    printf("idade: %d",idade);
     printf("IMC: %.2lf",imc);
 
-
-
-return 0;
+    if (imc < 18.5) {
+     printf("Peso Abaixo\n");
+     }
+    else if (imc >=18.5 || imc<=24.9){
+     printf("Peso normal \n");
+     }
+    else if (imc>=25.0||imc<=29.9){
+     printf("Sobrepeso \n");
+     }
+    else if (imc >= 30.0||imc<=34.9){
+     printf("Obesidade \n");
+     }
+    else {
+     printf("Obesidade 2 \n");
+     }
 }
