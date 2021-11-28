@@ -9,7 +9,7 @@ void limpar_entrada(){
 int main(){
 
     int idade;
-    double salario,altura;
+    double peso,altura,imc;
     char genero;
     char nome[50];
 
@@ -19,6 +19,13 @@ int main(){
     printf("Digite o nome da pessoa: ");
     limpar_entrada();
     fgets(nome,50,stdin);
+
+    printf("Digite o seu peso: ");
+    scanf("%lf",&peso);
+    printf("Digite a sua altura: ");
+    scanf("%lf",&altura);
+
+
 
 
 }
