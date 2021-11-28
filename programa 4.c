@@ -14,15 +14,17 @@ double peso,imc;
     printf("Digite seu nome: \n");
     scanf("%s",nome);
     printf("Digite sua idade: \n");
-    scanf("%d",idade);
+    scanf("%d",&idade);
 
     printf("Digite sua altura: \n");
-    scanf("%lf",altura);
+    scanf("%lf",&altura);
     printf("Digite seu peso: \n");
-    scanf("%lf",peso);
+    scanf("%lf",&peso);
 
     imc = peso/(altura*altura);
 
+
+    printf("%s  \n",nome);
     printf("Seu IMC = %.2lf\n",imc);
 
 
